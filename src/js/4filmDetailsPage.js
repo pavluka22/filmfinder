@@ -2,10 +2,10 @@ import refs from './refs';
 import modalTpl from '../templates/detailsPage.hbs';
 import MovieApiService from './apiService.js';
 import { parse } from 'handlebars';
+import { TMDB_API_KEY, TMDB_BASE_URL } from './config.js';
 
-const BASE_URL = 'https://api.themoviedb.org/3/';
-
-const API_KEY = 'c2406e33bae3c04a8fdebb618c81ede7';
+const BASE_URL = TMDB_BASE_URL + '/';
+const API_KEY = TMDB_API_KEY;
 
 // console.log(refs.openModal);
 // console.log(refs.modal);
