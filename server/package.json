@@ -1,0 +1,20 @@
+{
+  "name": "filmfinder-server",
+  "version": "1.0.0",
+  "description": "Локальный API-сервер для Filmfinder, совместимый с форматом TMDB API",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "import": "node scripts/import-imdb.js",
+    "import:fast": "node scripts/import-imdb.js --min-votes=1000"
+  },
+  "dependencies": {
+    "better-sqlite3": "^9.4.3",
+    "cors": "^2.8.5",
+    "express": "^4.18.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
