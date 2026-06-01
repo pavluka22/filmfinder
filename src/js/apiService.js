@@ -1,5 +1,6 @@
 import refs from './refs';
 import spinner from './spinner';
+import { TMDB_API_KEY, TMDB_BASE_URL } from './config.js';
 
 export default class MovieApiService {
   constructor() {
@@ -9,8 +10,8 @@ export default class MovieApiService {
     this.total_results;
     this.page = 1;
     this.url;
-    this.apiKey = '90996ae54f24edbe7886996fac12fc31';
-    this.baseUrl = `https://api.themoviedb.org/3`;
+    this.apiKey = TMDB_API_KEY;
+    this.baseUrl = TMDB_BASE_URL;
   }
   //Поиск по запросу популярных фильмов.Вынесла в отдельную ф-цию, чтоб не запутаться в зенах.
   fetchPopularMovies() {

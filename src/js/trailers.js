@@ -1,9 +1,10 @@
 import * as basicLightbox from 'basiclightbox';
 import 'basiclightbox/dist/basicLightbox.min.css';
 import refs from './refs';
+import { TMDB_API_KEY, TMDB_BASE_URL } from './config.js';
 
-const BASE_URL = 'https://api.themoviedb.org/3/';
-const API_KEY = 'c2406e33bae3c04a8fdebb618c81ede7';
+const BASE_URL = TMDB_BASE_URL + '/';
+const API_KEY = TMDB_API_KEY;
 
 let id;
 
@@ -29,7 +30,7 @@ function fetchTrailerFilm(id) {
 refs.gallery.addEventListener('click', hadleClickTrailer);
 
 function hadleClickTrailer(e) {
-  id = event.target.dataset.id;
+  id = e.target.dataset.id;
 
   const targetClass = e.target.className;
   if (targetClass === 'trailer-div' || targetClass === 'trailer-space') {
